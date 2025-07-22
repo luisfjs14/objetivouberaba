@@ -49,7 +49,7 @@ Criar uma presença digital profissional para o Colégio, oferecendo:
 
 ## 📌 Acesso
 
-Projeto disponível em: [www.objetivouberaba.com.br](https://www.objetivointegradouberaba.com.br)
+Projeto disponível em: [objetivointegradouberaba.com](https://objetivointegradouberaba.com)
 
 ---
 
