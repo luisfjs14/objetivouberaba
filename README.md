@@ -53,4 +53,4 @@ Projeto disponível em: [objetivointegradouberaba.com](https://objetivointegrado
 
 ---
 
-Desenvolvido por [Seu Nome] - Colégio Objetivo Uberaba.
+Desenvolvido por Luis F. de J. Soares - Colégio Objetivo Uberaba.
