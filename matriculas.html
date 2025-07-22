@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrícula - Colégio Objetivo Uberaba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <style>
+    .input-erro {
+      border-color: red;
+      background-color: #fff0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <a href="index.html">
+          <img src="assets/logoobjetivouberabaamarela.png" alt="Logo Colégio Objetivo" class="logo" />
+        </a>
+        <img src="assets/30anos.png" alt="30 anos" class="logo-aniversario" />
+      </div>
+
+      <nav class="header-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <a href="restrita.php" class="btn-restrita">Área Restrita</a>
+      </div>
+    </div>
+  </header>
+
+  <a href="https://wa.me/5534984459808" target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+<body>
+  <section class="trabalhe-container">
+    <div class="linha-separadora"></div>
+    <h1 class="titulo-pagina">Área de Matrícula</h1>
+    <!--<p class="descricao-trabalhe">
+      <!--Preencha o formulário abaixo e envie os domentos necessários abaixo.<br>-->
+      <!--A foto 3x4 deverá ser entregue na escola até 10/03/2026 juntamente com o histórico escolar.-->
+    <!--</p>-->
+  <div class="form-container">
+    <form id="matriculaForm" action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="linha-separadora"></div>
+    <h2>Dados do Aluno</h2>
+    <div class="form-group">
+      <label>Nome completo do aluno *</label>
+      <input type="text" name="nomeAluno" required>
+    </div>
+    <div class="form-group">
+      <label>Turma *</label>
+      <select name="turma" required>
+      <option value="">Selecione</option>
+      <option>Maternal 1</option>
+      <option>Maternal 2</option>
+      <option>Maternal 3</option>
+      <option>Infantil 1</option>
+      <option>Infantil 2</option>
+      <option>1º Ano</option>
+      <option>2º Ano</option>
+      <option>3º Ano</option>
+      <option>4º Ano</option>
+      <option>5º Ano</option>
+      <option>6º Ano</option>
+      <option>7º Ano</option>
+      <option>8º Ano</option>
+      <option>9º Ano</option>
+      <option>1ª Série</option>
+      <option>2ª Série</option>
+      <option>3ª Série</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Data de nascimento *</label>
+      <input type="date" id="dataNascimentoAluno" name="dataNascimentoAluno" required>
+    </div>
+    <div class="form-group">
+      <label>CPF *</label>
+      <input type="text" name="cpfAluno" required>
+      <span class="erro-cpf" id="erroCpfAluno" style="color:red; display:none; font-size: 0.9em;">CPF inválido</span>
+    </div>
+    <div class="form-group">
+      <label>CEP *</label>
+      <input type="text" id="cepAluno" name="cepAluno" required>
+    </div>
+    <div class="form-group">
+      <label>Rua *</label>
+      <input type="text" id="logradouroAluno" name="logradouroAluno" required>
+    </div>
+    <div class="form-group">
+      <label>Bairro *</label>
+      <input type="text" id="bairroAluno" name="bairroAluno" required>
+    </div>
+    <div class="form-group">
+      <label>Número *</label>
+      <input type="text" name="numeroAluno" required>
+    </div>
+    <div class="form-group">
+      <label>Complemento</label>
+      <input type="text" name="complementoAluno">
+    </div>
+    <div class="form-group">
+      <label>Cidade *</label>
+      <input type="text" id="cidadeAluno" name="cidadeAluno" required>
+    </div>
+    <div class="form-group">
+      <label>UF *</label>
+      <select id="ufAluno" name="ufAluno" required>
+        <option value="">Selecione</option>
+        <option value="AC">Acre (AC)</option>
+        <option value="AL">Alagoas (AL)</option>
+        <option value="AP">Amapá (AP)</option>
+        <option value="AM">Amazonas (AM)</option>
+        <option value="BA">Bahia (BA)</option>
+        <option value="CE">Ceará (CE)</option>
+        <option value="DF">Distrito Federal (DF)</option>
+        <option value="ES">Espírito Santo (ES)</option>
+        <option value="GO">Goiás (GO)</option>
+        <option value="MA">Maranhão (MA)</option>
+        <option value="MT">Mato Grosso (MT)</option>
+        <option value="MS">Mato Grosso do Sul (MS)</option>
+        <option value="MG">Minas Gerais (MG)</option>
+        <option value="PA">Pará (PA)</option>
+        <option value="PB">Paraíba (PB)</option>
+        <option value="PR">Paraná (PR)</option>
+        <option value="PE">Pernambuco (PE)</option>
+        <option value="PI">Piauí (PI)</option>
+        <option value="RJ">Rio de Janeiro (RJ)</option>
+        <option value="RN">Rio Grande do Norte (RN)</option>
+        <option value="RS">Rio Grande do Sul (RS)</option>
+        <option value="RO">Rondônia (RO)</option>
+        <option value="RR">Roraima (RR)</option>
+        <option value="SC">Santa Catarina (SC)</option>
+        <option value="SP">São Paulo (SP)</option>
+        <option value="SE">Sergipe (SE)</option>
+        <option value="TO">Tocantins (TO)</option>
+      </select>
+    </div>
+
+    <div class="linha-separadora"></div>
+    <h2>Dados da Mãe</h2>
+    <div class="form-group">
+      <label>Nome completo *</label>
+      <input type="text" name="nomeMae" required>
+    </div>
+    <div class="form-group">
+      <label>Data de nascimento *</label>
+      <input type="date" name="dataNascimentoMae" required>
+    </div>
+    <div class="form-group">
+      <label>CPF *</label>
+      <input type="text" name="cpfMae" required>
+      <span class="erro-cpf" id="erroCpfMae" style="color:red; display:none; font-size: 0.9em;">CPF inválido</span>
+    </div>
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" name="emailMae" required>
+    </div>
+    <div class="form-group">
+      <label>WhatsApp com DDD *</label>
+      <input type="text" name="whatsappMae" required>
+    </div>
+
+    <div class="linha-separadora"></div>
+    <h2>Dados do Pai</h2>
+    <div class="form-group">
+      <label>Nome completo</label>
+      <input type="text" name="nomePai">
+    </div>
+    <div class="form-group">
+      <label>Data de nascimento</label>
+      <input type="date" name="dataNascimentoPai">
+    </div>
+    <div class="form-group">
+      <label>CPF</label>
+      <input type="text" name="cpfPai">
+      <span class="erro-cpf" id="erroCpfPai" style="color:red; display:none; font-size: 0.9em;">CPF inválido</span>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="emailPai">
+    </div>
+    <div class="form-group">
+      <label>WhatsApp com DDD</label>
+      <input type="text" name="whatsappPai">
+    </div>
+
+    <div class="linha-separadora"></div>
+    <h2>Responsável Financeiro</h2>
+    <button type="button"  class="botao" onclick="replicar('mae')">Usar dados da mãe</button>
+    <button type="button"  class="botao" onclick="replicar('pai')">Usar dados do pai</button>
+    <div class="form-group">
+      <label>Nome completo *</label>
+      <input type="text" name="nomeResp" required>
+    </div>
+    <div class="form-group">
+      <label>Data de nascimento *</label>
+      <input type="date" name="dataNascimentoResp" required>
+    </div>
+    <div class="form-group">
+      <label>CPF *</label>
+      <input type="text" name="cpfResp" required>
+      <span class="erro-cpf" id="erroCpfResp" style="color:red; display:none; font-size: 0.9em;">CPF inválido</span>
+    </div>
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" name="emailResp" required>
+    </div>
+    <div class="form-group">
+      <label>WhatsApp com DDD *</label>
+      <input type="text" name="whatsappResp" required>
+    </div>
+
+    <button type="button" class="botao" onclick="replicarEnderecoAluno()">Usar mesmo endereço do aluno</button>
+    <div class="form-group">
+      <label>CEP *</label>
+      <input type="text" id="cepResp" name="cepResp" required>
+    </div>
+    <div class="form-group">
+      <label>Rua *</label>
+      <input type="text" id="logradouroResp" name="logradouroResp" required>
+    </div>
+    <div class="form-group">
+      <label>Bairro *</label>
+      <input type="text" id="bairroResp" name="bairroResp" required>
+    </div>
+    <div class="form-group">
+      <label>Número *</label>
+      <input type="text" name="numeroResp" required>
+    </div>
+    <div class="form-group">
+      <label>Complemento</label>
+      <input type="text" name="complementoResp">
+    </div>
+    <div class="form-group">
+      <label>Cidade *</label>
+      <input type="text" id="cidadeResp" name="cidadeResp" required>
+    </div>
+    <div class="form-group">
+      <label>UF *</label>
+      <select id="ufResp" name="ufAluno" required>
+        <option value="">Selecione</option>
+        <option value="AC">Acre (AC)</option>
+        <option value="AL">Alagoas (AL)</option>
+        <option value="AP">Amapá (AP)</option>
+        <option value="AM">Amazonas (AM)</option>
+        <option value="BA">Bahia (BA)</option>
+        <option value="CE">Ceará (CE)</option>
+        <option value="DF">Distrito Federal (DF)</option>
+        <option value="ES">Espírito Santo (ES)</option>
+        <option value="GO">Goiás (GO)</option>
+        <option value="MA">Maranhão (MA)</option>
+        <option value="MT">Mato Grosso (MT)</option>
+        <option value="MS">Mato Grosso do Sul (MS)</option>
+        <option value="MG">Minas Gerais (MG)</option>
+        <option value="PA">Pará (PA)</option>
+        <option value="PB">Paraíba (PB)</option>
+        <option value="PR">Paraná (PR)</option>
+        <option value="PE">Pernambuco (PE)</option>
+        <option value="PI">Piauí (PI)</option>
+        <option value="RJ">Rio de Janeiro (RJ)</option>
+        <option value="RN">Rio Grande do Norte (RN)</option>
+        <option value="RS">Rio Grande do Sul (RS)</option>
+        <option value="RO">Rondônia (RO)</option>
+        <option value="RR">Roraima (RR)</option>
+        <option value="SC">Santa Catarina (SC)</option>
+        <option value="SP">São Paulo (SP)</option>
+        <option value="SE">Sergipe (SE)</option>
+        <option value="TO">Tocantins (TO)</option>
+      </select>
+    </div>
+
+    <div class="linha-separadora"></div>
+    <h2>Documentos (PDF ou imagem)</h2>
+    <div class="form-group">
+      <label>Certidão de nascimento *</label>
+      <input type="file" name="certidao" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>RG e CPF do aluno *</label>
+      <input type="file" name="rgcpfAluno" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>RG e CPF da mãe *</label>
+      <input type="file" name="rgcpfMae" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>RG e CPF do pai</label>
+      <input type="file" name="rgcpfPai" accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+    <div class="form-group">
+      <label>RG e CPF do responsável financeiro *</label>
+      <input type="file" name="rgcpfResp" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>Cartão de vacinação *</label>
+      <input type="file" name="cartaoVacina" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>Declaração de escolaridade *</label>
+      <input type="file" name="declaracao" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>Foto 3x4 do aluno (imagem apenas) *</label>
+      <input type="file" name="fotoAluno" accept=".jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>Comprovante de residência do aluno *</label>
+      <input type="file" name="comprovanteAluno" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <div class="form-group">
+      <label>Comprovante de residência do responsável financeiro *</label>
+      <input type="file" name="comprovanteResp" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+
+    <button type="submit" class="botao">Enviar Matrícula</button>
+    </form>
+    </div>
+  </div>
+
+    <script>
+  // CPF: aplica máscara
+  function aplicarMascaraCPF(input) {
+    input.addEventListener('input', function () {
+      let valor = input.value.replace(/\D/g, '');
+      if (valor.length > 11) valor = valor.slice(0, 11);
+      valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+      valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+      valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      input.value = valor;
+    });
+  }
+
+  // CPF: validação real
+  function validarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]+/g, '');
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+
+    let soma = 0, resto;
+    for (let i = 1; i <= 9; i++) soma += parseInt(cpf[i - 1]) * (11 - i);
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf[9])) return false;
+
+    soma = 0;
+    for (let i = 1; i <= 10; i++) soma += parseInt(cpf[i - 1]) * (12 - i);
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf[10])) return false;
+
+    return true;
+  }
+
+  // Telefone: máscara
+  function aplicarMascaraTelefone(input) {
+    input.addEventListener('input', function () {
+      let valor = input.value.replace(/\D/g, '');
+      if (valor.length > 11) valor = valor.slice(0, 11);
+      if (valor.length <= 10) {
+        valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      } else {
+        valor = valor.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+      }
+      input.value = valor;
+    });
+  }
+
+  // CEP: máscara
+  function aplicarMascaraCEP(input) {
+    input.addEventListener('input', function () {
+      let valor = input.value.replace(/\D/g, '');
+      if (valor.length > 8) valor = valor.slice(0, 8);
+      valor = valor.replace(/^(\d{5})(\d{0,3})/, '$1-$2');
+      input.value = valor;
+    });
+  }
+
+  // E-mail: validação simples
+  function validarEmail(input) {
+    input.addEventListener('blur', function () {
+      const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (input.value && !emailValido.test(input.value)) {
+        alert(`O e-mail "${input.value}" é inválido.`);
+        input.focus();
+      }
+    });
+  }
+
+  // CEP: via ViaCEP
+  function autoPreencherEndereco(cepId, logradouroId, bairroId, cidadeId, ufId) {
+    const cep = document.getElementById(cepId).value.replace(/\D/g, '');
+    if (cep.length !== 8) return;
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.erro) {
+          alert("CEP não encontrado.");
+          return;
+        }
+        document.getElementById(logradouroId).value = data.logradouro;
+        document.getElementById(bairroId).value = data.bairro;
+        document.getElementById(cidadeId).value = data.localidade;
+        document.getElementById(ufId).value = data.uf;
+      })
+      .catch(() => alert("Erro ao buscar o CEP."));
+  }
+
+  // Replicador de dados
+  function replicar(origem) {
+    const campos = ['nome', 'dataNascimento', 'cpf', 'email', 'whatsapp'];
+    campos.forEach(campo => {
+      const origemCampo = document.querySelector(`[name="${campo}${origem.charAt(0).toUpperCase() + origem.slice(1)}"]`);
+      const destinoCampo = document.querySelector(`[name="${campo}Resp"]`);
+      if (origemCampo && destinoCampo) destinoCampo.value = origemCampo.value;
+    });
+  }
+
+  function replicarEnderecoAluno() {
+  document.getElementById('cepResp').value = document.getElementById('cepAluno').value;
+  document.getElementById('logradouroResp').value = document.getElementById('logradouroAluno').value;
+  document.getElementById('bairroResp').value = document.getElementById('bairroAluno').value;
+  document.getElementsByName('numeroResp')[0].value = document.getElementsByName('numeroAluno')[0].value;
+  document.getElementsByName('complementoResp')[0].value = document.getElementsByName('complementoAluno')[0].value;
+  document.getElementById('cidadeResp').value = document.getElementById('cidadeAluno').value;
+
+  // Atualiza o valor do SELECT UF
+  document.getElementById('ufResp').value = document.getElementById('ufAluno').value;
+}
+
+  // Aplicar máscaras e validações nos campos existentes
+  window.addEventListener('DOMContentLoaded', () => {
+    // CPFs
+    ['cpfMae', 'cpfAluno', 'cpfPai', 'cpfResp'].forEach(id => {
+      const campo = document.getElementsByName(id)[0];
+      if (campo) {
+        aplicarMascaraCPF(campo);
+        campo.addEventListener('blur', () => {
+          const erroSpan = document.getElementById("erro" + id.charAt(0).toUpperCase() + id.slice(1));
+          if (campo.value && !validarCPF(campo.value)) {
+            erroSpan.style.display = "inline";
+            campo.classList.add("input-erro");
+          } else {
+            erroSpan.style.display = "none";
+            campo.classList.remove("input-erro");
+          }
+        });
+      }
+    });
+
+    // Telefones
+    ['whatsappMae', 'whatsappPai', 'whatsappResp'].forEach(id => {
+      const campo = document.getElementsByName(id)[0];
+      if (campo) aplicarMascaraTelefone(campo);
+    });
+
+    // CEPs
+    ['cepAluno', 'cepResp'].forEach(id => {
+      const campo = document.getElementById(id);
+      if (campo) aplicarMascaraCEP(campo);
+    });
+
+    // Emails
+    ['emailMae', 'emailPai', 'emailResp'].forEach(id => {
+      const campo = document.getElementsByName(id)[0];
+      if (campo) validarEmail(campo);
+    });
+
+    // Auto-preenchimento de CEPs
+    document.getElementById('cepAluno').addEventListener('blur', () => {
+      autoPreencherEndereco('cepAluno', 'logradouroAluno', 'bairroAluno', 'cidadeAluno', 'ufAluno');
+    });
+
+    document.getElementById('cepResp').addEventListener('blur', () => {
+      autoPreencherEndereco('cepResp', 'logradouroResp', 'bairroResp', 'cidadeResp', 'ufResp');
+    });
+  });
+
+  document.getElementById("matricula").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("URL_DO_SEU_WEB_APP", {
+    method: "POST",
+    body: data
+  })
+  .then(r => r.text())
+  .then(html => {
+    document.body.innerHTML = html;
+  })
+  .catch(err => {
+    alert("Erro ao enviar: " + err);
+  });
+});
+</script>
+</body>
+</html>

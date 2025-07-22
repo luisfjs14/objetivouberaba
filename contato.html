@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Colégio Objetivo Uberaba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <a href="index.html">
+          <img src="assets/logoobjetivouberabaamarela.png" alt="Logo Colégio Objetivo" class="logo" />
+        </a>
+        <img src="assets/30anos.png" alt="30 anos" class="logo-aniversario" />
+      </div>
+
+      <nav class="header-center" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="trabalhe.html">Trabalhe Conosco</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        <a href="restrita.html" class="btn-restrita">Área Restrita</a>
+      </div>
+    </div>
+  </header>
+
+  <a href="https://wa.me/5534984459808" target="_blank" class="whatsapp-button" title="Fale conosco no WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+
+<main class="contato-container">
+
+  <section class="contato-info">
+    <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.0197685351386!2d-47.96293250000001!3d-19.7543147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad1d53cc1b1e3%3A0xfa487f61ac886ec7!2sCol%C3%A9gio%20Objetivo%20Uberaba!5e0!3m2!1spt-BR!2sbr!4v1750202490409!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="info-dados">
+      <h2 class="titulo-secao"><br>Colégio Objetivo Uberaba</h2>
+      <p><strong>Telefone fixo:</strong> <br>(34) 3333-2576</p>
+      <p><strong>Horário de funcionamento:</strong> <br>Segunda a sexta, das 8h às 22h</p>
+      <p><strong>E-mail:</strong> <br>objetivointegradouberaba@gmail.com</p>
+      <p><strong>WhatsApp:</strong> <br><a href="https://wa.me/5534984459808" target="_blank" class="botao-whatsapp">Falar no WhatsApp</a></p>
+    </div>
+  </section>
+
+  <section class="contato-formulario">
+    <div class="linha-separadora"></div>
+    <h2 class="titulo-secao">Venha conhecer o colégio!</h2>
+    <p>Preencha o formulário abaixo e nos envie para agendarmos uma visita!</p>
+    <div class="formularioaluno">
+      <form id="faleConoscoForm">
+        <div class="form-grupo">
+          <label for="nomeAluno">Nome completo do aluno:</label>
+          <input type="text" id="nomeAluno" name="nomeAluno" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="nascimentoAluno">Data de nascimento do aluno:</label>
+          <input type="date" id="nascimentoAluno" name="nascimentoAluno" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="responsavel">Nome do responsável:</label>
+          <input type="text" id="responsavel" name="responsavel" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="whatsapp">WhatsApp do responsável:</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="escolaAtual">Em qual escola o aluno estuda atualmente?</label>
+          <input type="text" id="escolaAtual" name="escolaAtual" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="turma">Turma desejada em 2026:</label>
+          <select id="turma" name="turma" required>
+            <option value="Turma não selecioada">Selecione a turma</option>
+            <option value="Maternal 1">Maternal 1</option>
+            <option value="Maternal 2">Maternal 2</option>
+            <option value="Maternal 3">Maternal 3</option>
+            <option value="Infantil 1">Infantil 1</option>
+            <option value="Infantil 2">Infantil 2</option>
+            <option value="1º Ano Ensino Fundamental">1º Ano Ensino Fundamental</option>
+            <option value="2º Ano Ensino Fundamental">2º Ano Ensino Fundamental</option>
+            <option value="3º Ano Ensino Fundamental">3º Ano Ensino Fundamental</option>
+            <option value="4º Ano Ensino Fundamental">4º Ano Ensino Fundamental</option>
+            <option value="5º Ano Ensino Fundamental">5º Ano Ensino Fundamental</option>
+            <option value="6º Ano Ensino Fundamental">6º Ano Ensino Fundamental</option>
+            <option value="7º Ano Ensino Fundamental">7º Ano Ensino Fundamental</option>
+            <option value="8º Ano Ensino Fundamental">8º Ano Ensino Fundamental</option>
+            <option value="9º Ano Ensino Fundamental">9º Ano Ensino Fundamental</option>
+            <option value="1ª Série Ensino Médio">1ª Série Ensino Médio</option>
+            <option value="2ª Série Ensino Médio">2ª Série Ensino Médio</option>
+            <option value="3ª Série Ensino Médio">3ª Série Ensino Médio</option>
+            <option value="Pré-Vestibular Manhã">Pré-Vestibular Manhã</option>
+            <option value="Pré-Vestibular Noite">Pré-Vestibular Noite</option>\n
+          </select>
+        </div>
+
+        <div class="form-grupo">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite aqui sua mensagem..."></textarea>
+        </div>
+
+        <button type="submit" class="botao-amarelo">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    const form = document.getElementById('faleConoscoForm');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const url = 'https://script.google.com/macros/s/AKfycbyKTHxfMoCDQM1Kat9ZvZ4gKRtNy2twxklMZmzYRupGmurczsDzXYt2tDLdOdFLDDImVw/exec';
+  const formData = new FormData(form);
+
+  const payload = new URLSearchParams();
+  formData.forEach((value, key) => payload.append(key, value));
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      body: payload
+    });
+
+    if (response.ok) {
+      alert('Sua mensagem foi enviada com sucesso!');
+      form.reset();
+    } else {
+      alert('Erro ao enviar. Tente novamente.');
+    }
+  } catch (error) {
+    alert('Erro na conexão. Tente novamente.');
+    console.error(error);
+  }
+});
+  </script>
+</main>
+
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="rodape-esquerda">
+        <img src="assets/logoobjetivouberabaamarela.png" class="logo" />
+        <p>Atendimentos:<br>Segunda a sexta, das 8h às 18h</p>
+        <p>
+          <br>
+          Unidade Uberaba<br>Ensino Infantil | Ensino Fundamental | Ensino Médio | Pré Vestibular <br> (34) 3333-2576
+        </p>
+        <p>CNPJ: 33.520.135/0001-37</p>
+        <div class="redes-sociais">
+          <a href="https://www.instagram.com/objetivouberaba/"><img src="assets/instagram.webp" alt="Instagram" /></a>
+          <a href="https://www.facebook.com/objetivointegradouberaba/?locale=pt_BR"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook" /></a>
+        </div>
+        <a href="#" class="politica-link">Política de Privacidade</a>
+      </div>
+      <div class="rodape-direita">
+        <img src="assets/grupointegrado.png" class="logo-integrado" />
+        <p class="versao">v1.69.0</p>
+      </div>
+    </div>
+    <div class="rodape-copy">
+      <p>Objetivo Uberaba © 2025 | Todos os direitos reservados</p>
+      <p>Made by Luis F. de J. Soares</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
